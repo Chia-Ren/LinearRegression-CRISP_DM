@@ -2,6 +2,9 @@
 
 This project is an interactive web application that demonstrates the principles of linear regression and the CRISP-DM (Cross-Industry Standard Process for Data Mining) workflow. The application is built using Streamlit and allows users to interactively explore the effects of different parameters on a linear regression model.
 
+## Demo Site
+Link: https://linearregression-crispdm-v4nkq8gdeyxduxou2hvs7k.streamlit.app/
+
 ## Features
 
 *   **Interactive Parameter Control:** Users can adjust the following parameters in real-time:
