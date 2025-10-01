@@ -47,3 +47,16 @@ Installed `streamlit`, `numpy`, `pandas`, `scikit-learn`, and `plotly` using `pi
 - Modified the Streamlit application to include outlier detection using the IQR method.
 - Initially, a new chart was added to display outliers.
 - Based on user feedback, the application was updated to highlight outliers on the main chart using Streamlit's session state.
+
+## 3.0 Project Deployment
+
+### 3.1 Pushed to GitHub
+- Initialized a new git repository.
+- Added the remote origin: `https://github.com/Chia-Ren/LinearRegression-CRISP_DM.git`.
+- Staged all files, committed them, and pushed to the `main` branch of the remote repository.
+
+## 4.0 Project Documentation
+
+### 4.1 Generated `readme.md`
+- Reviewed the entire project and wrote a detailed report in `readme.md`.
+- The report includes an overview of the project, features, technologies used, and instructions on how to run the application.
