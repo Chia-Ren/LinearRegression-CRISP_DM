@@ -1,0 +1,66 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>RL Gridworld</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reinforcement Learning Gridworld</h1>
+        
+        <div class="controls">
+            <form id="grid-form">
+                <label for="dimension">Grid Dimension (3-9):</label>
+                <input type="number" id="dimension" min="3" max="9" value="5" required>
+                <button type="submit" class="btn btn-info">Generate Grid</button>
+            </form>
+        </div>
+        
+        <div class="cell-type-selector">
+            <button data-type="start" class="active btn btn-success">Start Cell</button>
+            <button data-type="goal" class="btn btn-danger">Goal Cell</button>
+            <button data-type="dead" class="btn btn-primary">Dead Cell</button>
+            <button data-type="obstacle" class="btn btn-secondary">Obstacle</button>
+            <button data-type="empty" class="btn btn-light">Empty Cell</button>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #4CAF50;"></div>
+                <span>Start</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #f44336;"></div>
+                <span>Goal (+20)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #2196F3;"></div>
+                <span>Dead (-20)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #9E9E9E;"></div>
+                <span>Obstacle (-1)</span>
+            </div>
+        </div>
+        
+        <div class="grid-container">
+            <div id="grid" class="grid"></div>
+        </div>
+        
+        <div class="reward-info">
+            <h3>Reward Structure:</h3>
+            <ul>
+                <li>Goal Cell (Red): +20 reward</li>
+                <li>Dead Cell (Blue): -20 penalty</li>
+                <li>Obstacle (Gray): -1 penalty if hit</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
